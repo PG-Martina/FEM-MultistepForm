@@ -1,0 +1,7 @@
+@use "../../styles/helpers" as *;
+@use "../../styles/custom-variables" as *;
+
+.addonsOverview {
+  height: 100%;
+  @include flex-column;
+}

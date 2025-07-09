@@ -1,0 +1,63 @@
+@use "../../styles/custom-variables" as *;
+@use "../../styles/helpers" as *;
+
+.toggleButton {
+  @include flex-center;
+  column-gap: $space-sm;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: $space-xl $space-md;
+    background-color: $color-white;
+    margin: 0 $space-sm;
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+
+  &--toggle {
+    span:last-of-type {
+      color: $color-blue-950;
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  &:not(.toggleButton--toggle) {
+    span:first-of-type {
+      color: $color-blue-950;
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  span {
+    color: $color-grey-500;
+    transition: color 0.3s ease;
+  }
+
+  &__button {
+    background-color: $color-blue-950;
+    width: 40px;
+    height: 20px;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+
+    &--toggle {
+      &::after {
+        transform: translate(23px, -50%) !important;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(5px, -50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      background-color: $color-white;
+      transition: transform 0.3s ease;
+    }
+  }
+}

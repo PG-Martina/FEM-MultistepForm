@@ -1,0 +1,16 @@
+@use "../../styles/helpers" as *;
+@use "../../styles/custom-variables" as *;
+
+.planOverview {
+  height: 100%;
+  @include flex-column;
+  justify-content: space-between;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    justify-content: flex-start;
+
+    .bottombar {
+      margin-top: auto;
+    }
+  }
+}

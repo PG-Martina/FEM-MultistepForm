@@ -1,0 +1,17 @@
+@use "../../styles/helpers" as *;
+@use "../../styles/custom-variables" as *;
+
+.personalForm {
+  @include flex-column;
+  height: 100%;
+  justify-content: space-between;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    form {
+      margin: 0 $space-sm;
+      background: $color-white;
+      border-radius: 0 0 $border-radius $border-radius;
+      padding: $space-md;
+    }
+  }
+}

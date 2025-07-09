@@ -1,0 +1,16 @@
+@use "../../styles/custom-variables" as *;
+
+.titleBox {
+  margin-bottom: $space-md;
+  flex: 0;
+  p {
+    color: $color-grey-500;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin: 0 $space-sm;
+    background: $color-white;
+    border-radius: $border-radius $border-radius 0 0;
+    padding: $space-md $space-md 0;
+  }
+}

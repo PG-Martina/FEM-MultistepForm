@@ -1,0 +1,126 @@
+@use "../../styles/custom-variables" as *;
+@use "../../styles/helpers" as *;
+
+.smallCard {
+  @include flex-column;
+  border: 1px solid $color-purple-200;
+  border-radius: $border-radius;
+  padding: $space-sm;
+  width: 100%;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  background-color: $color-white;
+  text-align: start;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &--active {
+    border-color: $color-purple-600;
+    background-color: $color-blue-100;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    flex-direction: row;
+    gap: $space-sm;
+    align-items: flex-start;
+  }
+
+  img {
+    width: 50px;
+    height: auto;
+    margin-bottom: $space-xl;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    @include flex-column;
+    row-gap: $space-xs;
+  }
+
+  &__title {
+    font-weight: $font-weight-medium;
+  }
+
+  &__price {
+    color: $color-grey-500;
+  }
+
+  &__deal {
+    padding: color $color-blue-950;
+    font-size: 14px;
+  }
+}
+
+.longCard {
+  width: 100%;
+  background-color: $color-white;
+  border: 1px solid $color-purple-200;
+  padding: $space-sm;
+  text-align: start;
+  border-radius: $border-radius;
+  @include flex-center-vertical;
+  column-gap: $space-md;
+  cursor: pointer;
+  color: $color-blue-950;
+  font-size: $font-size-base;
+
+  &:hover,
+  &--active {
+    border-color: $color-purple-600;
+    background-color: $color-blue-100;
+  }
+
+  &--active {
+    .longCard__checkmark {
+      background-color: $color-purple-600;
+      border-color: $color-purple-600;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__checkmark {
+    width: 15px;
+    height: 15px;
+    border: 1px solid $color-purple-200;
+    border-radius: 2px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 4px;
+      width: 3px;
+      height: 7px;
+      border-right: 2px solid $color-white;
+      border-bottom: 2px solid $color-white;
+      transform: rotate(45deg);
+      opacity: 0;
+    }
+  }
+
+  &__info {
+    @include flex-column;
+    row-gap: $space-xxs;
+  }
+
+  &__title {
+    font-weight: $font-weight-medium;
+  }
+
+  &__description {
+    color: $color-grey-500;
+  }
+
+  &__price {
+    margin-left: auto;
+    color: $color-purple-600;
+  }
+}

@@ -1,0 +1,28 @@
+@use "../../styles/custom-variables" as *;
+@use "../../styles/helpers" as *;
+
+.success {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  @include flex-center;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin: -100px $space-sm 0;
+    background: $color-white;
+    border-radius: $border-radius;
+    padding: 100px 50px;
+    height: auto;
+  }
+
+  &__content {
+    @include flex-column-center;
+    width: 100%;
+    gap: $space-sm;
+
+    p {
+      text-align: center;
+      color: $color-grey-500;
+    }
+  }
+}

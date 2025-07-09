@@ -1,0 +1,18 @@
+@use "../../styles/helpers" as *;
+@use "../../styles/custom-variables" as *;
+
+.addonsList {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+  @include flex-column;
+  row-gap: $space-sm;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin: 0 $space-sm;
+    background: $color-white;
+    border-radius: 0 0 $border-radius $border-radius;
+    padding: $space-md;
+    flex: 0;
+  }
+}

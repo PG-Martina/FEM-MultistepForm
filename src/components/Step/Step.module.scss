@@ -1,0 +1,45 @@
+@use "../../styles/custom-variables" as *;
+@use "../../styles/helpers" as *;
+
+.step {
+  text-decoration: none;
+  color: $color-white;
+  @include flex-center-vertical;
+  column-gap: $space-sm;
+
+  &--active {
+    .step__number {
+      background-color: $color-blue-200;
+      border-color: $color-blue-200;
+      color: $color-blue-950;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__number {
+    border: 1px solid;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    @include flex-center;
+  }
+
+  &__info {
+    text-transform: uppercase;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  &__counter {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: $color-blue-200;
+  }
+
+  &__title {
+    font-weight: $font-weight-bold;
+  }
+}

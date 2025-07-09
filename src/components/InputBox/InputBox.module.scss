@@ -1,0 +1,47 @@
+@use "../../styles/helpers" as *;
+@use "../../styles/custom-variables" as *;
+
+.inputBox {
+  @include flex-column;
+  row-gap: $space-xs;
+
+  &:not(:last-of-type) {
+    margin-bottom: $space-md;
+  }
+
+  &__header {
+    @include flex-between-center;
+  }
+
+  &__error {
+    color: $color-red-500;
+    font-weight: $font-weight-medium;
+  }
+
+  &__input {
+    padding: 10px;
+    height: 50px;
+    border-radius: $border-radius;
+    border: 1px solid $color-purple-200;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    color: $color-blue-950;
+    outline: none;
+
+    &--error {
+      border-color: $color-red-500;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:not(.inputBox__input--error) {
+        border-color: $color-purple-600;
+      }
+    }
+
+    &:focus:not(.inputBox__input--error) {
+      border-color: $color-purple-600;
+    }
+  }
+}

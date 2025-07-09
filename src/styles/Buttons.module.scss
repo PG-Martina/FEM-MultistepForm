@@ -1,0 +1,25 @@
+@use "./custom-variables" as *;
+
+@mixin button {
+  margin: 0;
+  border: none;
+  border-radius: $border-radius;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-base;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buttonFilled {
+  @include button;
+  background-color: $color-blue-950;
+  color: $color-white;
+  padding: $space-sm $space-lg;
+}
+
+.buttonGhost {
+  @include button;
+  padding: $space-sm 0;
+  background-color: transparent;
+  color: $color-blue-950;
+}

@@ -1,0 +1,72 @@
+@use "../../styles/helpers" as *;
+@use "../../styles/custom-variables" as *;
+
+.priceOverview {
+  flex: 1;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin: 0 $space-sm;
+    background: $color-white;
+    border-radius: 0 0 $border-radius $border-radius;
+    padding: $space-md $space-md $space-lg;
+    flex: 0;
+  }
+
+  &__plan {
+    @include flex-between-center;
+    padding-bottom: $space-md;
+    border-bottom: 1px solid $color-purple-200;
+  }
+
+  &__top {
+    background-color: $color-blue-100;
+    padding: $space-sm;
+    border-radius: $border-radius;
+  }
+
+  &__planInfo {
+    @include flex-column;
+    gap: $space-xs;
+    padding-bottom: $space-xs;
+
+    a {
+      color: $color-grey-500;
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  &__title {
+    font-weight: $font-weight-medium;
+  }
+
+  &__price {
+    font-weight: $font-weight-bold;
+    font-size: 18px;
+  }
+
+  &__addons {
+    list-style: none;
+    margin: 0;
+    padding: $space-md 0 $space-xs;
+    @include flex-column;
+    row-gap: $space-sm;
+
+    li {
+      @include flex-between-center;
+      color: $color-grey-500;
+    }
+  }
+
+  &__total {
+    @include flex-between-center;
+    color: $color-grey-500;
+    margin-top: $space-md;
+    padding: 0 $space-sm;
+  }
+
+  &__priceTotal {
+    font-weight: $font-weight-bold;
+    font-size: 18px;
+    color: $color-purple-600;
+  }
+}

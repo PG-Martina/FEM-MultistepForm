@@ -1,0 +1,27 @@
+@use "../../styles/custom-variables" as *;
+@use "../../styles/helpers" as *;
+
+.smallCardList {
+  @include flex-between-center;
+  padding: 0;
+  list-style: none;
+  column-gap: $space-sm;
+  margin-bottom: $space-sm;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin: 0 $space-sm;
+    background: $color-white;
+    padding: $space-md;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-sm;
+  }
+
+  &__item {
+    flex: 1 0 0;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+  }
+}
