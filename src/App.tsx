@@ -1,5 +1,5 @@
 import {
-  createBrowserRouter,
+  createHashRouter, // changed from createBrowserRouter
   Navigate,
   RouterProvider,
 } from "react-router-dom";
@@ -12,19 +12,24 @@ import Step3 from "./pages/Step3";
 import Step4 from "./pages/Step4";
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter(
+    [
+      {
+        path: "/",
+        element: <Layout />,
+        children: [
+          { index: true, element: <Navigate to={Paths.Step1} replace /> },
+          { path: Paths.Step1, element: <Step1 /> },
+          { path: Paths.Step2, element: <Step2 /> },
+          { path: Paths.Step3, element: <Step3 /> },
+          { path: Paths.Step4, element: <Step4 /> },
+        ],
+      },
+    ],
     {
-      path: "/",
-      element: <Layout />,
-      children: [
-        { index: true, element: <Navigate to={Paths.Step1} replace /> },
-        { path: Paths.Step1, element: <Step1 /> },
-        { path: Paths.Step2, element: <Step2 /> },
-        { path: Paths.Step3, element: <Step3 /> },
-        { path: Paths.Step4, element: <Step4 /> },
-      ],
-    },
-  ]);
+      basename: "/FEM-MultistepForm/",
+    }
+  );
   return <RouterProvider router={router} />;
 }
 
