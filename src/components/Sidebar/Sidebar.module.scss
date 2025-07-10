@@ -6,8 +6,8 @@
   background-image: url("../../assets/bg-sidebar-desktop.svg");
   background-position: center;
   background-size: cover;
-  border-radius: $border-radius;
-  padding: $space-md;
+  border-radius: $small-border-radius;
+  padding: 39px $space-lg;
 
   @media screen and (max-width: $breakpoint-tablet) {
     border-radius: 0;

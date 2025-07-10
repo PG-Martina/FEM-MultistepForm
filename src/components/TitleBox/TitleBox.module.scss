@@ -1,10 +1,11 @@
 @use "../../styles/custom-variables" as *;
 
 .titleBox {
-  margin-bottom: $space-md;
+  margin-bottom: 23px;
   flex: 0;
   p {
     color: $color-grey-500;
+    margin: 0;
   }
 
   @media screen and (max-width: $breakpoint-tablet) {

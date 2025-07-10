@@ -3,9 +3,10 @@
 @mixin button {
   margin: 0;
   border: none;
-  border-radius: $border-radius;
+  border-radius: 8px;
   font-weight: $font-weight-medium;
   font-size: $font-size-base;
+  font-family: $font-family-base;
   text-decoration: none;
   cursor: pointer;
 }
@@ -14,12 +15,13 @@
   @include button;
   background-color: $color-blue-950;
   color: $color-white;
-  padding: $space-sm $space-lg;
+  padding: 15px 25px;
 }
 
 .buttonGhost {
   @include button;
-  padding: $space-sm 0;
+  padding: 14px 0;
   background-color: transparent;
   color: $color-blue-950;
+  height: 48px;
 }

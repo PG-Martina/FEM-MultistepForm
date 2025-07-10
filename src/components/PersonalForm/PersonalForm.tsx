@@ -40,28 +40,30 @@ function PersonalForm() {
           register={register("name")}
           error={errors.name?.message}
           clearErrors={() => clearErrors("name")}
+          placeholder="e.g. Stephen King"
         />
         <InputBox
           name="email"
           type="text"
-          label="Email"
+          label="Email Address"
           register={register("email")}
           error={errors.email?.message}
           clearErrors={() => clearErrors("email")}
+          placeholder="e.g. stephenking@lorem.com"
         />
         <InputBox
           name="phone"
           type="text"
-          label="Phone number"
+          label="Phone Number"
           register={register("phone")}
           error={errors.phone?.message}
           clearErrors={() => clearErrors("phone")}
+          placeholder="e.g. +1 234 567 890"
         />
       </form>
       <Bottombar
         hasNext={true}
         hasPrev={false}
-        
         submitHandler={handleSubmit(handleDataStore)}
       />
     </div>

@@ -6,6 +6,7 @@
   flex: 1;
   height: 100%;
   @include flex-center;
+  padding-right: 35px;
 
   @media screen and (max-width: $breakpoint-tablet) {
     margin: -100px $space-sm 0;
@@ -18,11 +19,17 @@
   &__content {
     @include flex-column-center;
     width: 100%;
-    gap: $space-sm;
+    row-gap: 25px;
+
+    h1 {
+      margin: 0;
+    }
 
     p {
       text-align: center;
       color: $color-grey-500;
+      line-height: 1.5;
+      margin: 0;
     }
   }
 }

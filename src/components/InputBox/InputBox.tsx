@@ -8,6 +8,7 @@ function InputBox({
   error,
   clearErrors,
   register,
+  placeholder,
 }: InputBoxComponent) {
   return (
     <div className={classes.inputBox}>
@@ -20,6 +21,7 @@ function InputBox({
       <input
         id={name}
         type={type}
+        placeholder={placeholder}
         {...register}
         onInput={() => clearErrors()}
         className={`${classes.inputBox__input} ${

@@ -15,4 +15,8 @@
   &__next {
     margin-left: auto !important;
   }
+
+  &__filled {
+    background-color: $color-purple-600 !important;
+  }
 }

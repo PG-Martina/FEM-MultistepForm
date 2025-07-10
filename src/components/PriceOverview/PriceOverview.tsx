@@ -16,7 +16,7 @@ function PriceOverview() {
         <div className={classes.priceOverview__plan}>
           <div className={classes.priceOverview__planInfo}>
             <span className={classes.priceOverview__title}>
-              {plan.title} {plan.monthly ? "(Montly)" : "(Yearly)"}
+              {plan.title} {plan.monthly ? "(Monthly)" : "(Yearly)"}
             </span>
             <Link to={`/${Paths.Step2}`}>Change</Link>
           </div>
@@ -46,7 +46,7 @@ function PriceOverview() {
         </ul>
       </div>
       <div className={classes.priceOverview__total}>
-        <span>Total{plan.monthly ? "(per month)" : "(per year)"}</span>
+        <span>Total {plan.monthly ? "(per month)" : "(per year)"}</span>
         <span className={classes.priceOverview__priceTotal}>
           +${total} {plan.monthly ? "/mo" : "/yr"}
         </span>

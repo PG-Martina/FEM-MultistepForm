@@ -19,6 +19,7 @@ export interface InputBoxComponent {
   error?: string;
   register: UseFormRegisterReturn;
   clearErrors: () => void;
+  placeholder?: string;
 }
 
 interface PlanType extends Card {

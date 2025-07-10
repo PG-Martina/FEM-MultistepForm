@@ -13,7 +13,7 @@
 
   &__item {
     &:not(:last-of-type) {
-      margin-bottom: $space-sm;
+      margin-bottom: 29px;
     }
 
     @media screen and (max-width: $breakpoint-tablet) {

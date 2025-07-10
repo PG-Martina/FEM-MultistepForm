@@ -1,11 +1,10 @@
 @use "./custom-variables" as *;
 
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
+  font-family: $font-family-base;
   font-weight: $font-weight-regular;
   font-size: $font-size-base;
-  line-height: 1;
+  line-height: 1.2;
   color: $color-blue-950;
   margin: 0;
   padding: 0;
@@ -17,12 +16,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
+  font-family: $font-family-base;
   font-weight: $font-weight-bold;
   color: $color-blue-950;
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 12px;
   line-height: 1.2;
 }
 

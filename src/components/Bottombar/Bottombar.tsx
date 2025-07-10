@@ -14,16 +14,20 @@ function Bottombar({
     <div className={classes.bottombar}>
       {hasPrev && prevStep && (
         <Link to={`/${prevStep}`} type="button" className={buttons.buttonGhost}>
-          Go back
+          Go Back
         </Link>
       )}
       {hasNext && (
         <button
           type="button"
-          className={`${buttons.buttonFilled} ${classes.bottombar__next}`}
+          className={`${buttons.buttonFilled} ${classes.bottombar__next} ${
+            hasNext && typeof hasNext === "string"
+              ? classes.bottombar__filled
+              : undefined
+          }`}
           onClick={submitHandler}
         >
-          {hasNext && typeof hasNext === "string" ? hasNext : "Next step"}
+          {hasNext && typeof hasNext === "string" ? hasNext : "Next Step"}
         </button>
       )}
     </div>

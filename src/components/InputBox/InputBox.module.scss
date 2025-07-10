@@ -11,6 +11,8 @@
 
   &__header {
     @include flex-between-center;
+    font-size: 14px;
+    font-weight: 500;
   }
 
   &__error {
@@ -19,14 +21,18 @@
   }
 
   &__input {
-    padding: 10px;
-    height: 50px;
-    border-radius: $border-radius;
+    padding: 10px 15px;
+    height: 47px;
+    border-radius: $small-border-radius;
     border: 1px solid $color-purple-200;
     font-size: $font-size-base;
     font-weight: $font-weight-medium;
     color: $color-blue-950;
     outline: none;
+
+    &::placeholder {
+      color: $color-grey-500;
+    }
 
     &--error {
       border-color: $color-red-500;
